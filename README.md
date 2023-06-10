@@ -27,7 +27,7 @@ To run this application locally, you need to have the following software install
 
 ## Usage
 
-1. Open your web browser and navigate to `http://localhost/UserManager-Login/login.php`.
+1. Open your web browser and navigate to `http://localhost/User-Manager-Login/login.php`.
 2. Use the provided login form to enter your username and password.
 3.To create an account, you can create it from phpmyadmin or from yönetim.php
 4. After logging in, you will be redirected to the management page (`yönetim.php`) where you can view and delete user records.
