@@ -2,6 +2,8 @@
 
 UserManager - Login is a web application developed for user management and login functionalities. It allows you to create, view, and delete user records stored in a MySQL database. Users can log in using their username and password.
 
+![image](https://github.com/0MeMo07/User-Manager-Login/assets/103096364/b1dd8331-792a-4935-9649-569838634df7)
+
 ## Features
 
 - User registration: Create new user records by providing a username and password.
