@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(49, 47, 47);
+}
+.baslık{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+}
+.login{
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 100px;
+    width: 300px;
+    height: 200px;
+    align-self: center;
+    margin-left: 530px;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+    opacity: 1;
+    z-index: 1;
+    box-shadow: inset 0 0 0 2px #10abff,
+    0 0 0 4px #1beabd,
+    3px -3px 50px #1beabd, 
+    -3px 3px 50px #10abff;
+}
+input{
+	background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+	display: inline-block;
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    border: none;
+    outline: none;
+    opacity: 1;
+    z-index: 1;
+    border-radius: 5px;
+    color: black;
+    width: 150px;
+    height: 25px;
+    transform: scale(.993, .94); 
+    transition: transform .5s, opacity .25s;
+    box-shadow: inset 0 0 0 2px #10abff,
+    0 0 0 4px #1beabd,
+    3px -3px 50px #1beabd, 
+    -3px 3px 50px #10abff;
+}
+.button{
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+	display: inline-block;
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: none;
+    outline: none;
+    opacity: 1;
+    padding: 0 .325em;
+    z-index: 1;
+	border-radius: 9999em;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    transform: scale(.993, .94); 
+    transition: transform .5s, opacity .25s;
+    box-shadow: inset 0 0 0 2px #10abff,
+    0 0 0 4px #1beabd,
+    3px -3px 50px #1beabd, 
+    -3px 3px 50px #10abff;
+}
+
+.madeby{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: rgb(106, 106, 107);
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
