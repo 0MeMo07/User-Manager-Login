@@ -20,6 +20,20 @@
             die("Bağlantı hatası: " . $conn->connect_error);
         }
 
+        if (isset($_POST['sil'])) {
+            $sil_ad = $_POST['sil_ad'];
+            $sil_sifre = $_POST['sil_sifre'];
+        
+            $sql = "DELETE FROM phplogin WHERE ad='$sil_ad' AND sifre='$sil_sifre'";
+        
+            if ($conn->query($sql) === TRUE) {
+                header("Location: yönetim.php");
+                exit();
+            } else {
+                echo "<div class='message'>Kullanıcı silinirken hata oluştu: " . $conn->error . "</div>";
+            }
+        }
+
         $sql = "SELECT * FROM phplogin";
         $result = $conn->query($sql);
 
@@ -27,13 +41,13 @@
             echo "<table>";
             echo "<tr><th>Ad</th><th>Şifre</th><th></th></tr>";
             while ($row = $result->fetch_assoc()) {
-                echo "<tr><td>" . $row["ad"] . "</td><td>" . $row["sifre"] . "</td><td><a href='?sil=".$row["ad"]."'>Sil</a></td></tr>";
+                echo "<tr><td>" . $row["ad"] . "</td><td>" . $row["sifre"] . "</td><td><form method='post' style='display: inline;'><input type='hidden' name='sil_ad' value='" . $row["ad"] . "'><input type='hidden' name='sil_sifre' value='" . $row["sifre"] . "'><button type='submit' name='sil'>Sil</button></form></td></tr>";
             }
             echo "</table>";
         } else {
             echo "<div class='message'>Veritabanında kayıtlı kullanıcı yok.</div>";
         }
-
+        
         if (isset($_POST['ekle'])) {
             $ad = $_POST['ad'];
             $sifre = $_POST['sifre'];
@@ -45,19 +59,6 @@
                 exit();
             } else {
                 echo "<div class='message'>Kullanıcı eklenirken hata oluştu: " . $conn->error . "</div>";
-            }
-        }
-
-        if (isset($_GET['sil'])) {
-            $ad = $_GET['sil'];
-
-            $sql = "DELETE FROM phplogin WHERE ad='$ad'";
-
-            if ($conn->query($sql) === TRUE) {
-                header("Location: yönetim.php");
-                exit();
-            } else {
-                echo "<div class='message'>Kullanıcı silinirken hata oluştu: " . $conn->error . "</div>";
             }
         }
 
